@@ -3,6 +3,7 @@ import { Layout } from './components/layout/Layout'
 import { HomePage } from './pages/HomePage'
 import { SavedTripsPage } from './pages/SavedTripsPage'
 import { WeatherMapPage } from './pages/WeatherMapPage'
+import { LocationInputTestPage } from './pages/LocationInputTestPage'
 
 function App() {
   return (
@@ -10,8 +11,9 @@ function App() {
       <Layout>
         <Routes>
           <Route path="/" element={<HomePage />} />
-          <Route path="/saved" element={<SavedTripsPage />} />
-          <Route path="/weather" element={<WeatherMapPage />} />
+          <Route path="/saved-trips" element={<SavedTripsPage />} />
+          <Route path="/weather-map" element={<WeatherMapPage />} />
+          <Route path="/test-location" element={<LocationInputTestPage />} />
         </Routes>
       </Layout>
     </Router>
