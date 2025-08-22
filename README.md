@@ -1,43 +1,80 @@
-# React + TypeScript + Vite
+# Car Trip Weather App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A React application for planning car trips with weather forecasts along the route. Users can input starting and destination points, view routes on an interactive map, and see weather conditions along their journey.
 
-Currently, two official plugins are available:
+## 🚀 Getting Started
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Prerequisites
 
-## Expanding the ESLint configuration
+- Node.js (v18 or higher)
+- npm or yarn
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### Installation
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+1. Clone the repository:
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+git clone https://github.com/stefanros481/my-yr-app.git
+cd my-yr-app
 ```
+
+2. Install dependencies:
+```bash
+npm install
+```
+
+3. Start the development server:
+```bash
+npm run dev
+```
+
+4. Open your browser and navigate to `http://localhost:5173`
+
+## 🛠️ Tech Stack
+
+- **Frontend**: React 19 with TypeScript
+- **Build Tool**: Vite
+- **Styling**: Tailwind CSS (to be added)
+- **UI Components**: shadcn/ui (to be added)
+- **Maps**: Google Maps API or Mapbox (to be added)
+- **Weather**: yr.no API (to be added)
+
+## 📁 Project Structure
+
+```
+src/
+├── components/
+│   ├── ui/              # shadcn/ui components
+│   ├── map/             # Map-related components
+│   ├── trip/            # Trip planning components
+│   ├── weather/         # Weather display components
+│   └── layout/          # Layout components
+├── hooks/               # Custom React hooks
+├── services/
+│   ├── api/            # API integration services
+│   └── utils/          # Utility functions
+├── types/              # TypeScript type definitions
+└── store/              # State management
+```
+
+## 🎯 Development Status
+
+Currently in **Phase 1: Basic Setup**
+
+See [Milestone Plan](./docs/milestone-plan.md) for detailed progress tracking.
+
+## 📚 Documentation
+
+- [App Specification](./docs/app-specification.md) - Complete technical specification
+- [Milestone Plan](./docs/milestone-plan.md) - Development roadmap and progress tracking
+
+## 🤝 Contributing
+
+This is a personal project, but contributions are welcome! Please read the specification documents before contributing.
+
+## 📄 License
+
+This project is private and not currently licensed for public use.
 
 You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
 
